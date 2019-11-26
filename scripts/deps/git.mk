@@ -9,6 +9,10 @@ SUB_SCRIPT_LIST := git-repo-mgr=git-repo-mgr
 SUB_SCRIPT_GIT_PREFIX := git@github.com:open-guide
 SUB_SCRIPT_LOCAL_PREFIX := scripts
 
+SUB_TEMPLATE_LIST := java-templates=java ide-templates=ide
+SUB_TEMPLATE_GIT_PREFIX := git@github.com:open-guide
+SUB_TEMPLATE_LOCAL_PREFIX := templates
+
 FCUT := cut -d '='
 
 
@@ -33,15 +37,19 @@ ga:
 gstatus:
 	git status
 	@echo SUB_SCRIPT=$(SUB_SCRIPT_LIST),$(SUB_SCRIPT_LOCAL_PREFIX),$(SUB_SCRIPT_GIT_PREFIX)
+	@echo SUB_TEMPLATE=$(SUB_TEMPLATE_LIST),$(SUB_TEMPLATE_LOCAL_PREFIX),$(SUB_TEMPLATE_GIT_PREFIX)
 
 ginit:
 	$(call doSubListInit,$(SUB_SCRIPT_LIST),$(SUB_SCRIPT_LOCAL_PREFIX),$(SUB_SCRIPT_GIT_PREFIX))
+	$(call doSubListInit,$(SUB_TEMPLATE_LIST),$(SUB_TEMPLATE_LOCAL_PREFIX),$(SUB_TEMPLATE_GIT_PREFIX))
 
 gpull: gfom ginit
 	$(call doSubListPull,$(SUB_SCRIPT_LIST),$(SUB_SCRIPT_LOCAL_PREFIX),$(SUB_SCRIPT_GIT_PREFIX))
+	$(call doSubListPull,$(SUB_TEMPLATE_LIST),$(SUB_TEMPLATE_LOCAL_PREFIX),$(SUB_TEMPLATE_GIT_PREFIX))
 
 gpush: gpom ginit
 	$(call doSubListPush,$(SUB_SCRIPT_LIST),$(SUB_SCRIPT_LOCAL_PREFIX),$(SUB_SCRIPT_GIT_PREFIX))
+	$(call doSubListPush,$(SUB_TEMPLATE_LIST),$(SUB_TEMPLATE_LOCAL_PREFIX),$(SUB_TEMPLATE_GIT_PREFIX))
 
 
 # ####################################
