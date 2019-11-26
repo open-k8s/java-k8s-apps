@@ -1,2 +1,2 @@
-# java-stack-guide
-java based technology stack guide
+# java-k8s-apps
+java-k8s-apps

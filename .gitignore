@@ -1,29 +1,42 @@
-# Project Generated
-# docker/
-log/
-backup/
-dist/
+# http://www.gnu.org/software/automake
 
-# Compiled class file
-*.class
+Makefile.in
+/ar-lib
+/mdate-sh
+/py-compile
+/test-driver
+/ylwrap
 
-# Log file
-*.log
+# http://www.gnu.org/software/autoconf
 
-# BlueJ files
-*.ctxt
+/autom4te.cache
+/autoscan.log
+/autoscan-*.log
+/aclocal.m4
+/compile
+/config.guess
+/config.h.in
+/config.sub
+/configure
+/configure.scan
+/depcomp
+/install-sh
+/missing
+/stamp-h1
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# https://www.gnu.org/software/libtool/
 
-# Package Files #
-*.jar
-*.war
-*.nar
-*.ear
-*.zip
-*.tar.gz
-*.rar
+/ltmain.sh
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+# http://www.gnu.org/software/texinfo
+
+/texinfo.tex
+
+# http://www.gnu.org/software/m4/
+
+m4/libtool.m4
+m4/ltoptions.m4
+m4/ltsugar.m4
+m4/ltversion.m4
+m4/lt~obsolete.m4
+autom4te.cache
